@@ -34,3 +34,22 @@ def salvar():
     categoria = entrada_categoria.get()
     quantidade = entrada_quantidade.get()
     preco = entrada_preco.get()
+    if nome == "" or categoria == "" or quantidade == "" or preco == "":
+        messagebox.showwarning("Atençao", "Preencha todos os campos")
+        return
+    cadastrar_produto(nome, categoria, int(quantidade), float(preco))
+    messagebox.showinfo("Sucesso", "Produto cadastrar com sucesso!")
+    
+    entrada_nome.delete(0, tk.END)
+    entrada_categoria.delete(0, tk.END)
+    entrada_quantidade.delete(0, tk.END)
+    entrada_preco.delete(0, tk.END)
+
+botao_salvar = tk.Button(
+    janela,
+    text="Cadastrar Produto",
+    command=salvar,
+    width=25
+)
+botao_salvar.pack(pady=20)
+janela.mainloop()
