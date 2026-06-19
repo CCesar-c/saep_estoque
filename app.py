@@ -52,4 +52,5 @@ botao_salvar = tk.Button(
     width=25
 )
 botao_salvar.pack(pady=20)
+
 janela.mainloop()

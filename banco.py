@@ -15,11 +15,12 @@ def cadastrar_produto(nome, categoria, quantidade, preco):
     cursor = conexao.cursor()
 
     sql = """
-    INTSERT INTO produtos(nome,categoria, quantidade, preco)
+    INSERT INTO produto(nome, categoria, quantidade, preco)
     VALUES (%s, %s, %s, %s)
     """
     valores = (nome, categoria, quantidade, preco)
     cursor.execute(sql, valores)
     conexao.commit()
+    
     cursor.close()
     conexao.close()
