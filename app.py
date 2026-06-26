@@ -12,7 +12,7 @@ frame_botoes.pack(pady=10)
 
 titulo = tk.Label(
     janela,
-    text="Saep Estoque Tactil",
+    text="Saep Estoque Facil",
     font=("Arial", 18, "bold")
 )
 titulo.pack(pady=10)
