@@ -12,7 +12,7 @@ frame_botoes.pack(pady=10)
 
 titulo = tk.Label(
     janela,
-    text="Saep estoqu tactil",
+    text="Saep Estoque Tactil",
     font=("Arial", 18, "bold")
 )
 titulo.pack(pady=10)
@@ -42,7 +42,7 @@ def limpar_campos():
     entrada_categoria.delete(0, tk.END)
     entrada_quantidade.delete(0, tk.END)
     entrada_preco.delete(0, tk.END)
-    
+
 
 
 def salvar():
@@ -160,6 +160,4 @@ botao_limpar = tk.Button(
     width=20
 )
 botao_limpar.grid(row=0, column=1, padx=5)
-
-
 janela.mainloop()
