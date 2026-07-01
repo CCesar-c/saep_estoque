@@ -7,5 +7,5 @@ categoria varchar(100) not null,
 quantidade int not null,
 preco decimal(10,2) not null
 );
-
+select * from produto
 show tables

@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 
-# from banco import cadastrar_produto, listar_produtos, excluir_produto
+from banco import cadastrar_produto, listar_produtos, excluir_produto
 
 janela = tk.Tk()
 janela.title("SAEP Estoque Fácil")
@@ -48,7 +48,7 @@ def atualizar_tabela():
     for item in tabela.get_children():
         tabela.delete(item)
     
-    #produtos = listar_produtos()
+    produtos = listar_produtos()
     for produto in produtos:
         tabela.insert("", tk.END, values=produto)
 
@@ -80,7 +80,7 @@ def salvar():
         messagebox.showwarning("Atenção", "O preço deve ser maior que zero.")
         return
 
-    # cadastrar_produto(nome, categoria, quantidade, preco)
+    cadastrar_produto(nome, categoria, quantidade, preco)
     messagebox.showinfo("Sucesso", "Produto cadastrado com sucesso!")
     limpar_campos()
     atualizar_tabela()
@@ -101,7 +101,7 @@ def excluir():
     )
 
     if resposta:
-        # excluir_produto(id_produto)
+        excluir_produto(id_produto)
         atualizar_tabela()
         messagebox.showinfo("Sucesso", "Produto excluído com sucesso!")
 
